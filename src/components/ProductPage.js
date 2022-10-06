@@ -1,3 +1,4 @@
+import {API_URL} from "../config/constants";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import  "./ProductPage.css";
@@ -9,7 +10,7 @@ const ProductPage = () => {
 
 	useEffect(() => {
 		axios
-			.get(`http://localhost:8080/products/${id}`)
+			.get(`${API_URL}/products/${id}`)
 			.then((res) => {
 				console.log(res);
 				product = res.data;
