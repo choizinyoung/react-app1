@@ -44,7 +44,7 @@ const MainPage = () => {
   return (
     <>
       <div id="body">
-        <Carousel autoplay autoplaySpeed={1000}>
+        <Carousel autoplay autoplaySpeed={1500}>
           {banners.map((banner,index)=>{
             return (
             <Link to={banner.href} key={index}>
@@ -70,7 +70,7 @@ const MainPage = () => {
                   <div className="product-content">
                     <span className="product-name">{product.name}</span>
                     <span className="product-price">{product.price}원</span>
-                    <div class="product-footer">
+                    <div className="product-footer">
                       <div className="product-seller">
                         <img
                           className="product-avatar"
