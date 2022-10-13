@@ -20,6 +20,9 @@
 #header-area img {
   width: 150px;
 }
+.Button {
+  display: none;
+}
 
 
 #footer {

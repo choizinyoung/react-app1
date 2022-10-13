@@ -16,7 +16,7 @@ const App = () => {
           <Link to="/">
             <img src="images/icons/logo.png" alt="logo" />
           </Link>
-          <Button size="large" icon={<UploadOutlined />} onClick={()=>{
+          <Button className="Button" size="large" icon={<UploadOutlined />} onClick={()=>{
 			navigate('/upload');
 		  }}>
             상품업로드
