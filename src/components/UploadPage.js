@@ -4,7 +4,7 @@ import axios from "axios";
 import { API_URL } from "../config/constants";
 import { useNavigate } from "react-router-dom";
 import { Form, Divider, Input, InputNumber, Button, Upload , message} from "antd";
-
+const { TextArea } = Input;
 
 const UploadPage = () => {
 	const navigate = useNavigate();
@@ -40,7 +40,7 @@ const UploadPage = () => {
 		<div id="body">
 			<div id="load-container">
 				<Form name="uploadForm" onFinish={onSubmit}>
-					<Form.Item name="upload" label={<div className="upload-label">상품 사진</div>} valuePropName="fileList">
+					<Form.Item name="upload" label={<div className="upload-label">상품 사진</div>}>
 						<Upload name="image" action={`${API_URL}/image`} listType="picture" showUploadList={false} onChange={onChageImage}>
 							{imageUrl ? (
 								<img id="upload-img" src={`${API_URL}/${imageUrl}`} />
@@ -62,11 +62,11 @@ const UploadPage = () => {
 					</Form.Item>
 					<Divider />
 					<Form.Item label={<div className="upload-label">판매가</div>} rules={[{ required: true, message: "판매가를 입력해주세요" }]} name="price" initialValue={0}>
-						<InputNumber className="upload-price" size="large" min={0} />
+						<InputNumber className="upload-price" size="large" min={0}  />
 					</Form.Item>
 					<Divider />
 					<Form.Item label={<div className="upload-label">상품설명</div>} rules={[{ required: true, message: "상품설명을 입력해주세요" }]} name="description">
-						<Input.TextArea size="large" id="product-description" showCount maxLength={300} placeholder="상품설명을 입력해주세요" />
+						<TextArea size="large" id="product-description" showCount maxLength={300} placeholder="상품설명을 입력해주세요" />
 					</Form.Item>
 					<Divider />
 					<Form.Item>
