@@ -44,7 +44,7 @@ const MainPage = () => {
   return (
     <>
       <div id="body">
-        <Carousel autoplay autoplaySpeed={1500}>
+        <Carousel autoplay autoplaySpeed={3000}>
           {banners.map((banner,index)=>{
             return (
             <Link to={banner.href} key={index}>
@@ -54,7 +54,7 @@ const MainPage = () => {
             </Link>)
           })}
         </Carousel>
-        <h2>Products</h2>
+        <h2>고객님을 위한 상품</h2>
         <div id="product-list">
           {products.map((product, idx) => {
             return (
