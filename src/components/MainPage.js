@@ -68,17 +68,12 @@ const MainPage = () => {
                     />
                   </div>
                   <div className="product-content">
+                      <div className="product-seller">
+                        <span>{product.seller}</span><span className="product-type">ALL</span>
+                      </div>
                     <span className="product-name">{product.name}</span>
                     <span className="product-price">{product.price}원</span>
                     <div className="product-footer">
-                      <div className="product-seller">
-                        <img
-                          className="product-avatar"
-                          src="images/icons/avatar.png"
-                          alt=""
-                        />
-                        <span>{product.seller}</span>
-                      </div>
                       <span className="product-dete">
                         {dayjs(product.createdAt).fromNow()}
                       </span>

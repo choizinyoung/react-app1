@@ -1,3 +1,4 @@
+@import url(../fonts.css);
 #body {
   height: 100%;
   width: 100%;
@@ -6,8 +7,9 @@
 }
 #body > h2 {
   width: 1440px;
-  margin: 0 auto;
-  margin-top: 16px;
+  margin: 10px auto;
+  margin-top: 20px;
+  font-size: 700;
 }
 
 #banner {
@@ -24,6 +26,7 @@
 }
 .product-card {
   width: 15%;
+  margin-top: 20px;
   margin-right: 2%;
   margin-bottom: 12px;
   border-radius: 12px;
@@ -54,15 +57,10 @@
   align-items: center;
   margin-top: 12px;
 }
-.product-avatar {
-  width: 24px;
-}
-
 .product-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 12px;
 }
 .product-date {
   font-size: 12px;
